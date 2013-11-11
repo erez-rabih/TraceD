@@ -18,6 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
+### Configuration
+
+Before using TraceD in your code you will have to provide it with a StatsD
+Client. You can use many existing clients like [statsd-ruby](https://github.com/reinh/statsd).
+
+```ruby
+TraceD::Client.set(Statsd.new 'localhost', 9125)
+```
+
+### Usage Scenraios
+
 Let's assume we have a Dummy class and we want to trace some_method:
 
 ```ruby
