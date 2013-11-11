@@ -26,12 +26,17 @@ Client. You can use many existing clients like [statsd-ruby](https://github.com/
 ```ruby
 TraceD::Client.set(Statsd.new 'localhost', 9125)
 ```
+I'll be using statsd-ruby as my client example in the usage scenarios.
 
 ### Usage Scenraios
 
 Let's assume we have a Dummy class and we want to trace some_method:
 
 ```ruby
+require 'traced'
+require 'statsd'
+TraceD::Client.set(Statsd.new 'localhost', 9125)
+
 class Dummy
 
   include TraceD
@@ -47,6 +52,10 @@ Simliarly, if we want to trace a class method, this is how things would look
 like:
 
 ```ruby
+require 'traced'
+require 'statsd'
+TraceD::Client.set(Statsd.new 'localhost', 9125)
+
 class Dummy
   class << self
     include TraceD
