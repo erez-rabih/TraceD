@@ -1,6 +1,6 @@
 # Traced
 
-TODO: Write a gem description
+TraceD is a ruby library which enables you to easily trace your methods via [StatsD](https://github.com/etsy/statsd/)
 
 ## Installation
 
@@ -18,7 +18,66 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Let's assume we have a Dummy class and we want to trace some_method:
+
+```ruby
+class Dummy
+
+  include TraceD
+
+  def some_method(arg)
+  end
+
+  statsd_trace :some_method
+end
+```
+
+Simliarly, if we want to trace a class method, this is how things would look
+like:
+
+```ruby
+class Dummy
+  class << self
+    include TraceD
+
+    def some_method(arg)
+    end
+
+    statsd_trace :some_method
+  end
+end
+```
+
+## Tracing Options
+
+### Stat Name
+
+By default, TraceD assigns the following stat name:
+
+```
+method_tracer.<Class Name>.<Method Name>
+```
+For example, in the first usage scenraio, the reported stat would be
+```
+method_tracer.Dummy.some_method
+```
+
+You can pass your own custom stat name in the following way:
+
+```ruby
+statsd_trace :some_method, stat_name: "custom.stat.name"
+```
+
+### Execution Count
+
+By default, TraceD will only report the execution time of the method.
+You can ask it to report the number of times a method has been called in the
+following way:
+
+```ruby
+statsd_trace :some_method, count: true
+```
+This way, both execution time and count will be reported
 
 ## Contributing
 
