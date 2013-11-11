@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ClassMethods	/Users/erez/workspace/traced/lib/traced.rb	/^  module ClassMethods$/;"	m	class:TraceD
+Client	/Users/erez/workspace/traced/lib/traced/client.rb	/^  class Client$/;"	c	class:TraceD
+Dummy1	/Users/erez/workspace/traced/spec/lib/traced_spec.rb	/^  class Dummy1$/;"	c
+Dummy2	/Users/erez/workspace/traced/spec/lib/traced_spec.rb	/^  class Dummy2$/;"	c
+Dummy3	/Users/erez/workspace/traced/spec/lib/traced_spec.rb	/^  class Dummy3$/;"	c
+Dummy4	/Users/erez/workspace/traced/spec/lib/traced_spec.rb	/^  class Dummy4$/;"	c
+DummyMethods	/Users/erez/workspace/traced/spec/lib/traced_spec.rb	/^  module DummyMethods$/;"	m
+InstanceMethods	/Users/erez/workspace/traced/lib/traced.rb	/^  module InstanceMethods$/;"	m	class:TraceD
+TraceD	/Users/erez/workspace/traced/lib/traced.rb	/^module TraceD$/;"	m
+TraceD	/Users/erez/workspace/traced/lib/traced/client.rb	/^module TraceD$/;"	m
+Traced	/Users/erez/workspace/traced/lib/traced/version.rb	/^module Traced$/;"	m
+client	/Users/erez/workspace/traced/lib/traced/client.rb	/^      def client$/;"	f	class:TraceD.Client
+config	/Users/erez/workspace/traced/lib/traced/client.rb	/^      def config$/;"	f	class:TraceD.Client
+default_count_stat_name	/Users/erez/workspace/traced/lib/traced.rb	/^    def default_count_stat_name(stat_name)$/;"	f	class:TraceD.InstanceMethods
+default_time_stat_name	/Users/erez/workspace/traced/lib/traced.rb	/^    def default_time_stat_name(method)$/;"	f	class:TraceD.InstanceMethods
+included	/Users/erez/workspace/traced/lib/traced.rb	/^  def self.included clazz$/;"	F	class:TraceD
+method_missing	/Users/erez/workspace/traced/lib/traced/client.rb	/^      def method_missing(sym, *args, &block)$/;"	f	class:TraceD.Client
+statsd_enabled?	/Users/erez/workspace/traced/lib/traced/client.rb	/^      def statsd_enabled?$/;"	f	class:TraceD.Client
+statsd_trace	/Users/erez/workspace/traced/lib/traced.rb	/^    def statsd_trace(method, opts = {})$/;"	f	class:TraceD.ClassMethods
+sum	/Users/erez/workspace/traced/spec/lib/traced_spec.rb	/^      def sum(arg1, arg2, arg3)$/;"	f	class:Dummy4
+sum	/Users/erez/workspace/traced/spec/lib/traced_spec.rb	/^    def sum(arg1, arg2, arg3)$/;"	f	class:DummyMethods
+traced_method_name	/Users/erez/workspace/traced/lib/traced.rb	/^    def traced_method_name(method)$/;"	f	class:TraceD.InstanceMethods
+zero	/Users/erez/workspace/traced/spec/lib/traced_spec.rb	/^      def zero$/;"	f	class:Dummy4
+zero	/Users/erez/workspace/traced/spec/lib/traced_spec.rb	/^    def zero$/;"	f	class:DummyMethods
