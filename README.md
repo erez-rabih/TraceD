@@ -30,7 +30,7 @@ I'll be using statsd-ruby as my client example in the usage scenarios.
 
 ### Usage Scenraios
 
-Let's assume we have a Dummy class and we want to trace some_method:
+Let's assume we have a `Dummy` class and we want to trace `some_method`:
 
 ```ruby
 require 'traced'
@@ -99,6 +99,25 @@ statsd_trace :some_method, count: true
 ```
 This way, both execution time and count will be reported
 
+### Notice
+
+1. Use the `statsd_trace` declaration only **after** the method definition in the class or
+else it won't work.
+
+2. If you're not using statsd-ruby please make sure your client adheres the
+   following intrface:
+
+```ruby
+class << self
+  def increment(stat_name)
+    # Report increment for stat_name
+  end
+
+  def time(stat_name, &block)
+    # yield and report timing for block
+  end
+end
+```
 ## Contributing
 
 1. Fork it
