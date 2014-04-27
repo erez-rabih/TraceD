@@ -1,4 +1,5 @@
 # Traced
+[![Build Status](https://travis-ci.org/erez-rabih/TraceD.svg?branch=master)](https://travis-ci.org/erez-rabih/TraceD)
 
 TraceD is a ruby library which enables you to easily trace your methods via [StatsD](https://github.com/etsy/statsd/)
 
