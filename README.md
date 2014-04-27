@@ -1,5 +1,6 @@
 # Traced
 [![Build Status](https://travis-ci.org/erez-rabih/TraceD.svg?branch=master)](https://travis-ci.org/erez-rabih/TraceD)
+[![Coverage Status](https://coveralls.io/repos/erez-rabih/TraceD/badge.png)](https://coveralls.io/r/erez-rabih/TraceD)
 
 TraceD is a ruby library which enables you to easily trace your methods via [StatsD](https://github.com/etsy/statsd/)
 
